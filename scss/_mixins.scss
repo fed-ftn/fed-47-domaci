@@ -55,12 +55,34 @@
   }
 }
 
-@mixin section($color, $bgColor) {
-  background-color: $bgColor;
-  color: $color;
-  width: 100vw;
-  min-height: 35vh;
-  @include media-query(sm) {
-    width: 98vw;
+@mixin btns {
+  button {
+    color: $fontColor;
+    background-color: white;
+    margin-left: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid $fontColor;
+    width: fit-content;
+    &:hover {
+      color: white;
+      background-color: $hoverColor;
+      cursor: pointer;
+    }
+    @include media-query(sm) {
+      font-size: 12px;
+      margin: 0;
+      padding: 1rem;
+    }
   }
 }
+
+// @mixin section($color, $bgColor) {
+//   background-color: $bgColor;
+//   color: $color;
+//   width: 100vw;
+//   min-height: 35vh;
+//   @include media-query(sm) {
+//     width: 98vw;
+//   }
+// }

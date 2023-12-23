@@ -122,6 +122,16 @@ header {
 main {
   @include flexy();
   flex-direction: column;
+  .btn-section {
+    @include flexy(flex-end, center);
+    width: 70%;
+    height: 6rem;
+    @include btns;
+    @include media-query(sm) {
+      @include flexy(space-around, center);
+      width: 100%;
+    }
+  }
 }
 
 footer {

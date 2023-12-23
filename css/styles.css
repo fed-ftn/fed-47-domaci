@@ -156,6 +156,42 @@ main {
   align-items: center;
   flex-direction: column;
 }
+main .btn-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 70%;
+  height: 6rem;
+}
+main .btn-section button {
+  color: #797979;
+  background-color: white;
+  margin-left: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid #797979;
+  width: fit-content;
+}
+main .btn-section button:hover {
+  color: white;
+  background-color: #cfd1d3;
+  cursor: pointer;
+}
+@media (max-width: 540px) {
+  main .btn-section button {
+    font-size: 12px;
+    margin: 0;
+    padding: 1rem;
+  }
+}
+@media (max-width: 540px) {
+  main .btn-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}
 
 footer {
   display: flex;
