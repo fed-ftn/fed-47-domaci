@@ -122,6 +122,7 @@ header {
 main {
   @include flexy();
   flex-direction: column;
+
   .btn-section {
     @include flexy(flex-end, center);
     width: 70%;
@@ -130,6 +131,38 @@ main {
     @include media-query(sm) {
       @include flexy(space-around, center);
       width: 100%;
+    }
+  }
+
+  .card-section {
+    @include flexy();
+    width: 100%;
+    background-color: $lightBlueColor;
+    padding: 3rem;
+    @include media-query(sm) {
+      padding: 1rem 0;
+    }
+    .card-container {
+      @include flexy(flex-start, center);
+      width: 70%;
+      flex-wrap: wrap;
+      @include card;
+      @include media-query(md) {
+        @include flexy();
+        width: 90%;
+      }
+      @include media-query(sm) {
+        @include flexy();
+        width: 100%;
+      }
+      .card-text {
+        opacity: 0;
+        @include media-query(sm) {
+          opacity: 1;
+          background: linear-gradient(to bottom, #ffffffb3, #ffffff80);
+          padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+        }
+      }
     }
   }
 }

@@ -77,6 +77,67 @@
   }
 }
 
+@mixin card {
+  .card {
+    width: 14vw;
+    height: 17vw;
+    margin: 1rem;
+    @include media-query(md) {
+      width: 25vw;
+      height: 23vw;
+    }
+    @include media-query(sm) {
+      width: 90vw;
+      height: 52vw;
+    }
+    &:hover .card-text {
+      opacity: 1;
+      background: linear-gradient(to bottom, #ffffffb3, #ffffff80);
+      padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+      transition: opacity 0.5s ease;
+    }
+    &:nth-child(1) {
+      background-image: url("../img/1.jpg");
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      background-image: url("../img/2.jpg");
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      background-image: url("../img/2.jpg");
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      background-image: url("../img/3.jpg");
+      background-size: cover;
+    }
+    &:nth-child(4) {
+      background-image: url("../img/4.jpg");
+      background-size: cover;
+    }
+    &:nth-child(5) {
+      background-image: url("../img/5.jpg");
+      background-size: cover;
+    }
+    &:nth-child(6) {
+      background-image: url("../img/6.jpg");
+      background-size: cover;
+    }
+
+    // &:hover {
+    //   color: white;
+    //   background-color: $hoverColor;
+    //   cursor: pointer;
+    // }
+    // @include media-query(sm) {
+    //   font-size: 12px;
+    //   margin: 0;
+    //   padding: 1rem;
+    // }
+  }
+}
+
 // @mixin section($color, $bgColor) {
 //   background-color: $bgColor;
 //   color: $color;
