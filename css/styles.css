@@ -14,11 +14,39 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
+  height: 4rem;
+}
+nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f75311;
+  height: 100%;
+  width: 25%;
+  padding-left: 1rem;
+}
+nav .logo h3 {
+  color: white;
+  font-weight: 100;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
+}
+nav .logo img {
+  height: 3rem;
+}
+nav .links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #374249;
+  height: 100%;
+  width: 25%;
+  padding-left: 1rem;
 }
 
 header {
@@ -27,14 +55,11 @@ header {
   align-items: flex-start;
 }
 
-nav {
+main {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-}
-
-section {
-  display: flex;
+  flex-direction: column;
 }
 
 footer {
