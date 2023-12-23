@@ -42,6 +42,19 @@
 }
 
 // Elements
+
+@mixin links {
+  text-decoration: none;
+  color: $linkColor;
+  padding: 0 2rem;
+  &:hover {
+    text-decoration: underline;
+  }
+  @include media-query(sm) {
+    padding-bottom: 2rem;
+  }
+}
+
 @mixin section($color, $bgColor) {
   background-color: $bgColor;
   color: $color;
@@ -49,24 +62,5 @@
   min-height: 35vh;
   @include media-query(sm) {
     width: 98vw;
-  }
-}
-
-@mixin links {
-  text-decoration: none;
-  color: $linkColor;
-  padding-right: 1rem;
-}
-
-@mixin h1 {
-  width: 70vw;
-  text-transform: uppercase;
-  text-align: center;
-  @include media-query(md) {
-    font-size: 1.25rem;
-    padding: 0 2rem;
-  }
-  @include media-query(sm) {
-    font-size: 1.25rem;
   }
 }

@@ -12,41 +12,80 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  width: 100vw;
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 4rem;
+  width: 100%;
+}
+@media (max-width: 540px) {
+  nav {
+    flex-direction: column;
+  }
+  nav:hover .links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+  }
 }
 nav .logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #f75311;
-  height: 100%;
+  height: 4rem;
   width: 25%;
+  background-color: #f75311;
+}
+@media (max-width: 540px) {
+  nav .logo {
+    width: 100%;
+  }
+}
+nav .logo img {
   padding-left: 1rem;
+  height: 3rem;
 }
 nav .logo h3 {
   color: white;
-  font-weight: 100;
+  font-weight: 300;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 1px;
-}
-nav .logo img {
-  height: 3rem;
 }
 nav .links {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 4rem;
+  width: 75%;
   background-color: #374249;
-  height: 100%;
-  width: 25%;
-  padding-left: 1rem;
+}
+@media (max-width: 540px) {
+  nav .links {
+    display: none;
+  }
+}
+nav .links a {
+  text-decoration: none;
+  color: #b2b3b3;
+  padding: 0 2rem;
+}
+nav .links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 540px) {
+  nav .links a {
+    padding-bottom: 2rem;
+  }
 }
 
 header {
