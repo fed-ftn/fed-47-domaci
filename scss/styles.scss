@@ -1,0 +1,39 @@
+@import "vars";
+@import "mixins";
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  @include flexy();
+  flex-direction: column;
+}
+
+header {
+  @include flexy(center, flex-start);
+}
+
+nav {
+  @include flexy(flex-end, center);
+}
+
+section {
+  display: flex;
+}
+
+footer {
+  @include flexy();
+}
