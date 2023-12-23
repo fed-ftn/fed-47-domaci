@@ -29,12 +29,12 @@ nav {
       flex-direction: column;
       width: 100%;
       height: auto;
-      padding-top: 2rem;
+      padding-top: 2.3rem;
     }
   }
   .logo {
     @include flexy(flex-start, center);
-    height: 4rem;
+    height: $navHeight;
     width: 25%;
     background-color: $orangeColor;
     @include media-query(sm) {
@@ -55,7 +55,7 @@ nav {
 
   .links {
     @include flexy(flex-start, center);
-    height: 4rem;
+    height: $navHeight;
     width: 75%;
     background-color: $darkBlueColor;
     @include media-query(sm) {
@@ -68,7 +68,55 @@ nav {
 }
 
 header {
-  @include flexy(center, flex-start);
+  @include flexy(center, flex-end);
+  width: 100%;
+  height: 60vh;
+  margin-top: $navHeight;
+  padding-bottom: 11vh;
+  background-image: url("../img/intro.jpg");
+  background-position: center;
+  background-size: cover;
+  @include media-query(md) {
+    padding-bottom: 18vh;
+  }
+  @include media-query(sm) {
+    padding-bottom: 0vh;
+  }
+  .heading-container {
+    color: white;
+    background-color: $headingBgColor;
+    padding: 0.5rem 15%;
+    text-align: center;
+    @include media-query(sm) {
+      width: 100%;
+      padding: 0rem 0rem 2rem 0rem;
+      background-color: black;
+      .heading-flex {
+        h1 {
+          font-size: 2.6rem;
+        }
+      }
+      p {
+        font-size: 0.85rem;
+      }
+    }
+    .heading-flex {
+      display: flex;
+      width: 100%;
+      h1 {
+        font-weight: 400;
+      }
+      @include media-query(md) {
+        flex-direction: column;
+      }
+      @include media-query(sm) {
+        flex-direction: column;
+      }
+    }
+    p {
+      font-weight: 300;
+    }
+  }
 }
 
 main {
