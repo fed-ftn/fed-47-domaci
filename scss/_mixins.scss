@@ -43,6 +43,15 @@
 
 // Elements
 
+@mixin h1 {
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: $darkBlueColor;
+    text-transform: uppercase;
+  }
+}
+
 @mixin links {
   text-decoration: none;
   color: $linkColor;

@@ -297,19 +297,19 @@ main .price-container {
   padding: 2rem;
 }
 main .price-container h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-bottom: 2rem;
   color: #374249;
+  text-transform: uppercase;
 }
 main .price-container p {
   color: #797979;
   padding-bottom: 3rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 @media (max-width: 540px) {
   main .price-container p {
     padding-bottom: 1rem;
-    font-size: 0.75rem;
   }
 }
 main .price-container .price-table {
@@ -431,6 +431,175 @@ main .price-container button:hover {
   main .price-container button {
     display: none;
   }
+}
+main .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f3f7f9;
+}
+main .contact h1 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  color: #374249;
+  text-transform: uppercase;
+}
+main .contact .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  main .contact .form-container {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+@media (max-width: 540px) {
+  main .contact .form-container {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+main .contact .form-container .map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+@media (min-width: 1281px) {
+  main .contact .form-container .map #map-sm {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  main .contact .form-container .map #map-lg {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  main .contact .form-container .map #map-lg {
+    display: none;
+  }
+}
+main .contact .form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  padding: 1.5rem;
+  margin-left: 2rem;
+  background-color: #f75311;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  main .contact .form-container form {
+    flex-direction: column;
+    width: 70%;
+    margin-left: 0rem;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 540px) {
+  main .contact .form-container form {
+    flex-direction: column;
+    width: 90%;
+    margin-left: 0rem;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+}
+main .contact .form-container form div input {
+  position: relative;
+  border: none;
+  outline: none;
+}
+main .contact .form-container form div input[placeholder] {
+  padding: 0.75rem;
+}
+main .contact .form-container form .sender {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .contact .form-container form .sender select {
+  width: 30%;
+  border: none;
+  outline: none;
+  margin-right: 2rem;
+  height: 40px;
+  color: #b2b3b3;
+  padding-left: 0.75rem;
+}
+@media (max-width: 540px) {
+  main .contact .form-container form .sender select {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+main .contact .form-container form .sender input {
+  width: 70%;
+}
+main .contact .form-container form .sender input::placeholder {
+  color: #b2b3b3;
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 540px) {
+  main .contact .form-container form .sender input {
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  main .contact .form-container form .sender {
+    flex-direction: column;
+  }
+}
+main .contact .form-container form .email {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+@media (max-width: 540px) {
+  main .contact .form-container form .email {
+    padding-top: 1rem;
+  }
+}
+main .contact .form-container form .email input {
+  width: 100%;
+  height: 40px;
+}
+main .contact .form-container form .email input::placeholder {
+  color: #b2b3b3;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+}
+main .contact .form-container form .message {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+@media (max-width: 540px) {
+  main .contact .form-container form .message {
+    padding-top: 1rem;
+  }
+}
+main .contact .form-container form .message input {
+  width: 100%;
+  height: 80px;
+}
+main .contact .form-container form .message input::placeholder {
+  color: #b2b3b3;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
 }
 
 footer {

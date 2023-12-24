@@ -167,18 +167,13 @@ main {
     @include flexy();
     flex-direction: column;
     padding: 2rem;
-    h1 {
-      font-size: 2.5rem;
-      padding-bottom: 2rem;
-      color: $darkBlueColor;
-    }
+    @include h1;
     p {
       color: $fontColor;
       padding-bottom: 3rem;
-      font-size: 1rem;
+      font-size: 0.75rem;
       @include media-query(sm) {
         padding-bottom: 1rem;
-        font-size: 0.75rem;
       }
     }
     .price-table {
@@ -202,6 +197,142 @@ main {
       }
       @include media-query(lg) {
         display: none;
+      }
+    }
+  }
+
+  .contact {
+    @include flexy();
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: $lightBlueColor;
+    @include h1;
+    .form-container {
+      @include flexy();
+      width: 60vw;
+      @include media-query(md) {
+        flex-direction: column;
+        width: 100vw;
+      }
+      @include media-query(sm) {
+        flex-direction: column;
+        width: 100vw;
+      }
+      .map {
+        @include flexy();
+        width: 30%;
+        @include media-query(lg) {
+          #map-sm {
+            display: none;
+          }
+        }
+        @include media-query(md) {
+          #map-lg {
+            display: none;
+          }
+        }
+        @include media-query(sm) {
+          #map-lg {
+            display: none;
+          }
+        }
+      }
+      form {
+        @include flexy();
+        flex-direction: column;
+        width: 60%;
+        padding: 1.5rem;
+        margin-left: 2rem;
+        background-color: $orangeColor;
+        @include media-query(md) {
+          flex-direction: column;
+          width: 70%;
+          margin-left: 0rem;
+          margin-top: 2rem;
+        }
+        @include media-query(sm) {
+          flex-direction: column;
+          width: 90%;
+          margin-left: 0rem;
+          margin-top: 2rem;
+          padding: 1rem;
+        }
+        div {
+          input {
+            position: relative;
+            border: none;
+            outline: none;
+            &[placeholder] {
+              padding: 0.75rem;
+            }
+          }
+        }
+        .sender {
+          width: 100%;
+          @include flexy(space-between, center);
+          select {
+            width: 30%;
+            border: none;
+            outline: none;
+            margin-right: 2rem;
+            height: 40px;
+            color: $linkColor;
+            padding-left: 0.75rem;
+            @include media-query(sm) {
+              margin-right: 0;
+              margin-bottom: 1rem;
+              width: 100%;
+            }
+          }
+          input {
+            width: 70%;
+            &::placeholder {
+              color: $linkColor;
+              @include position-y-center(absolute, 0.75rem);
+            }
+            @include media-query(sm) {
+              width: 100%;
+            }
+          }
+          @include media-query(sm) {
+            flex-direction: column;
+          }
+        }
+        .email {
+          width: 100%;
+          padding-top: 1.5rem;
+          @include media-query(sm) {
+            padding-top: 1rem;
+          }
+          input {
+            width: 100%;
+            height: 40px;
+            &::placeholder {
+              color: $linkColor;
+              position: absolute;
+              top: 0.75rem;
+              left: 0.75rem;
+            }
+          }
+        }
+        .message {
+          width: 100%;
+          padding-top: 1.5rem;
+          @include media-query(sm) {
+            padding-top: 1rem;
+          }
+          input {
+            width: 100%;
+            height: 80px;
+            &::placeholder {
+              color: $linkColor;
+              position: absolute;
+              top: 0.75rem;
+              left: 0.75rem;
+            }
+          }
+        }
       }
     }
   }
