@@ -340,4 +340,12 @@ main {
 
 footer {
   @include flexy();
+  background-color: $darkBlueColor;
+  color: $linkColor;
+  padding: 1rem 0;
+  font-weight: 500;
+  span {
+    color: $orangeColor;
+    margin-left: 5px;
+  }
 }

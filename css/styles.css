@@ -606,6 +606,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #374249;
+  color: #b2b3b3;
+  padding: 1rem 0;
+  font-weight: 500;
+}
+footer span {
+  color: #f75311;
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
