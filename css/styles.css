@@ -289,6 +289,149 @@ main .card-section .card-container .card-text {
     padding: 0.5rem 0.5rem 2.5rem 0.5rem;
   }
 }
+main .price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+main .price-container h1 {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: #374249;
+}
+main .price-container p {
+  color: #797979;
+  padding-bottom: 3rem;
+  font-size: 1rem;
+}
+@media (max-width: 540px) {
+  main .price-container p {
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+  }
+}
+main .price-container .price-table {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border-bottom: 1px solid #797979;
+  border-right: 1px solid #797979;
+  border-top: none;
+  border-left: none;
+}
+main .price-container .price-table div {
+  color: #797979;
+  border: 1px solid #797979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  main .price-container .price-table div {
+    font-size: 0.9rem;
+    padding: 7px 17px;
+  }
+}
+main .price-container .price-table .div1 {
+  grid-area: 1/1/3/7;
+  border: none;
+}
+main .price-container .price-table .div2 {
+  grid-area: 1/7/2/11;
+  background-color: #f75311;
+  color: white;
+}
+main .price-container .price-table .div3 {
+  grid-area: 2/7/3/10;
+  background-color: #374249;
+  color: white;
+}
+main .price-container .price-table .div4 {
+  grid-area: 2/10/3/11;
+  background-color: #374249;
+  color: white;
+}
+main .price-container .price-table .div5 {
+  grid-area: 3/1/6/4;
+  background-color: #f75311;
+  color: white;
+}
+main .price-container .price-table .div6 {
+  grid-area: 3/4/4/7;
+  background-color: #374249;
+  color: white;
+}
+main .price-container .price-table .div7 {
+  grid-area: 4/4/5/7;
+  background-color: #374249;
+  color: white;
+}
+main .price-container .price-table .div8 {
+  grid-area: 5/4/6/7;
+  background-color: #374249;
+  color: white;
+}
+main .price-container .price-table .div9 {
+  grid-area: 3/7/4/10;
+}
+main .price-container .price-table .div10 {
+  grid-area: 3/10/4/11;
+}
+main .price-container .price-table .div11 {
+  grid-area: 4/7/5/10;
+}
+main .price-container .price-table .div12 {
+  grid-area: 4/10/5/11;
+}
+main .price-container .price-table .div13 {
+  grid-area: 5/7/6/10;
+}
+main .price-container .price-table .div14 {
+  grid-area: 5/10/6/11;
+}
+@media (max-width: 540px) {
+  main .price-container .price-table {
+    display: none;
+  }
+}
+main .price-container button {
+  color: #797979;
+  background-color: white;
+  margin-left: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid #797979;
+  width: fit-content;
+}
+main .price-container button:hover {
+  color: white;
+  background-color: #cfd1d3;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+@media (max-width: 540px) {
+  main .price-container button {
+    font-size: 12px;
+    margin: 0;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  main .price-container button {
+    display: none;
+  }
+}
+@media (min-width: 1281px) {
+  main .price-container button {
+    display: none;
+  }
+}
 
 footer {
   display: flex;
